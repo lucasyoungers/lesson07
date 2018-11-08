@@ -1,0 +1,75 @@
+/* This is a global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Phone code, default */
+
+/* Code for non-image things (Phone) */
+.header-image {
+    width: 200%;
+}
+
+/* Code for image gallery (Phone) */
+.page-wrapper {
+    position: relative;
+    min-height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url("https://images.pexels.com/photos/289649/pexels-photo-289649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.responsive-image {
+    max-width: 100%;
+}
+
+.cell {
+    margin: 1rem;
+}
+
+.cell img {
+    display: block;
+}
+
+/* Tablet code */
+
+/* Code for non-image things (Tablet) */
+.header-image {
+    width: 150%;
+}
+
+/* Code for image gallery (Tablet) */
+@media screen and (min-width: 600px) {
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .cell {
+        margin: 1rem;
+        width: calc(50% - 2rem);
+    }
+}
+
+/* Desktop code */
+
+/* Code for non-image things (Desktop) */
+.header-image {
+    width: 100%;
+}
+
+/* Code for image gallery (Desktop) */
+@media screen and (min-width: 1000px) {
+    .cell {
+        margin: 1rem;
+        width: calc((100% / 3) - 2rem);
+    }
+}
