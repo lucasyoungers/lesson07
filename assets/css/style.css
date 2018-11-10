@@ -1,18 +1,156 @@
-/* This is a global reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+h1 {
+    font: 60px 'Tangerine', cursive;
+    font-weight: bold;
+}
+
+h3 {
+    font: 42px 'Tangerine', cursive;
+    font-weight: bold;
+}
+
+p {
+    font: 14px 'Open Sans', sans-serif;
+    line-height: 2;
+}
+
+a {
+    text-decoration: none;
+    color: lightblue;
+    font: 14px 'Open Sans', sans-serif;
+    line-height: 2;
+}
+
+.page__wrapper {
+    margin: 1rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+/* The inital shadow is very small, look at .card:hover to see the card rise when the mouse hovers. */
+.card {
+    width: 290px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px 0px  rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.card--hasfooter {
+    padding-bottom: 2rem;
+}
+
+.card__image {
+    max-width: 100%;
+}
+
+.card .card__body {
+    padding: 0 20px 20px;
+}
+
+.card__footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.card .btn--default {
+    background: rgb(95, 167, 190);
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.card:hover {
+    transition-duration: 0.5s;
+    transition-property: all;
+    /* transition-delay: 0.1s; */
+    transition-timing-function: ease;
+    box-shadow: 3px 3px 6px 0px  rgba(0,0,0,0.3);
+}
+
+/* In order to show the user that the button can be pressed it rises using a shadow on hover */
+.btn--default:hover {
+    box-shadow: 2px 2px 4px 0px  rgba(0,0,0,0.3);
+}
+
+.page__footer {
+    margin: 0;
+    padding: 1rem;
+    padding-left: 1.6rem;
+    background-color: rgb(58, 113, 131);
+    color: white;
+}
+
+@media only screen and (min-width: 1260px) {
+    .card {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    /* we have choosen to make one card larger then the others. */
+    /* Change the layout to be Wide screen friendly */
+    #card1 {
+        width: 600px;
+    }
+} 
+
+@media only screen and (max-width: 580px) {
+    /* Change the layout to be mobile friendly */    
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* We do away with larger cards and treat them all the same */
+    .card {
+        width: 95%;
+        margin: 10px;
+    } 
+
+    h1 {
+        font-size: 30px
+    }
+}
+
+/*
+
+Old code...We will remember you. RIP Code: 8 November 2018 - 9 November 2018
+
+This is a global reset
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Phone code, default */
+Phone code, default
 
-/* Code for non-image things (Phone) */
+Code for non-image things (Phone)
 .header-image {
     width: 200%;
 }
 
-/* Code for image gallery (Phone) */
+Code for image gallery (Phone)
 .page-wrapper {
     position: relative;
     min-height: 100%;
@@ -39,15 +177,15 @@
     display: block;
 }
 
-/* Tablet code */
+Tablet code
 
-/* Code for non-image things (Tablet) */
+Code for non-image things (Tablet)
 .header-image {
     width: 150%;
 }
 
-/* Code for image gallery (Tablet) */
-@media screen and (min-width: 600px) {
+Code for image gallery (Tablet)
+@media only screen and (min-width: 600px) {
     .grid {
         display: flex;
         flex-wrap: wrap;
@@ -59,17 +197,19 @@
     }
 }
 
-/* Desktop code */
+Desktop code
 
-/* Code for non-image things (Desktop) */
+Code for non-image things (Desktop)
 .header-image {
     width: 100%;
 }
 
-/* Code for image gallery (Desktop) */
-@media screen and (min-width: 1000px) {
+Code for image gallery (Desktop)
+@media only screen and (min-width: 1000px) {
     .cell {
         margin: 1rem;
         width: calc((100% / 3) - 2rem);
     }
 }
+
+*/
